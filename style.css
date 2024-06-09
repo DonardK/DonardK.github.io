@@ -304,7 +304,7 @@ h3 {
     position: relative;
 }
 
-.testimonials h1{
+.testimonials h1 {
     font-size: 32px;
 }
 
@@ -318,7 +318,7 @@ h3 {
     background: #CBC3E3;
     padding: 25px;
     cursor: pointer;
-    display: none;
+    display: block; /* Changed from display: none; to display: block; */
 }
 
 .testimonials-col img {
@@ -335,10 +335,6 @@ h3 {
 .testimonials-col h3 {
     margin-top: 15px;
     text-align: left;
-}
-
-.testimonials-col.displaySlide {
-    display: block;
 }
 
 @media (max-width: 700px) {
@@ -388,51 +384,4 @@ h3 {
     margin: 0 13px;
     cursor: pointer;
     padding: 18px 0;
-}
-
-.slider {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.slider img {
-    width: 100%;
-    display: none;
-}
-
-img.displaySlide {
-    display: block;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-.slider button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    padding: 10px 15px;
-    background-color: rgba(203, 195, 227, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
-}
-
-@keyframes fade {
-    from {
-        opacity: .5;
-    }
-    to {
-        opacity: 1;
-    }
 }
