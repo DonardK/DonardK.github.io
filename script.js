@@ -34,11 +34,6 @@ function generateRainbowText(element) {
     }
 }
 
-function initializeSliders() {
-  initializeSlider(slides, 'displaySlide', nextSlide, prevSlide);
-  initializeSlider(testimonialSlides, 'displaySlide', nextTestimonial, prevTestimonial);
-}
-
 function initializeSlider(slideArray, displayClass, nextFunc, prevFunc) {
   if(slideArray.length > 0){
     slideArray[0].classList.add(displayClass);
@@ -85,15 +80,4 @@ function nextTestimonial() {
   clearInterval(testimonialIntervalId);
   showSlide(testimonialSlides, testimonialIndex + 1, 'displaySlide');
   testimonialIntervalId = setInterval(nextTestimonial, 5000);
-}
-
-function showSlide(slideArray, index, displayClass) {
-  if (index >= slideArray.length) {
-    index = 0;
-  } else if (index < 0) {
-    index = slideArray.length - 1;
-  }
-
-  slideArray.forEach(slide => slide.classList.remove(displayClass));
-  slideArray[index].classList.add(displayClass);
 }
